@@ -1,0 +1,88 @@
+[[-
+<div class="views-row views-row-1 views-row-odd views-row-first shk-item">
+
+    <div class="views-field views-field-title">
+        <span class="field-content"><a href="[[~[[+id]]]]">[[+pagetitle]]</a></span>
+    </div>
+    <div class="views-field views-field-field-prod-printer">
+        <div class="field-content">[[+tv.product__printer]]</div>
+    </div>
+    <div class="views-field views-field-field-prod-price">
+        <div class="field-content">
+            <div class="price_rub">[[+tv.product__price]] </div>
+            <div class="price_ye">18</div>
+        </div>
+    </div>
+
+    <div class="views-field views-field-nid">
+        <form action="[[~[[*id]]? &scheme=`abs`]]" method="post">
+            <div class="field-content">
+
+                <div class="cols basket_item_count">
+                    <input class="shk-count" type="text" size="2" name="shk-count" maxlength="3" title="изменить количество" value="1" />
+                    [[*for-sale:[[+id]]]]
+                    <!--span class="min">-</span>
+                    <span class="cif">1</span>
+                    <span class="plus">+</span-->
+                </div>
+
+                <button type="submit" rel="16308" class="buy addto_basket shk-but">продать</button>
+                <input type="hidden" name="shk-id" value="[[+id]]" />
+                <input type="hidden" name="shk-name" value="[[+pagetitle]]" />
+
+            </div>
+        </form>
+    </div>
+</div>
+]]
+
+<div class="views-row views-row-1 views-row-odd views-row-first" >
+
+    <div class="views-field views-field-title"><span class="field-content"><a
+            href="[[~[[+id]]]]">[[+pagetitle]]</a></span></div>
+    <div class="views-field views-field-field-prod-printer">
+        <div class="field-content">[[+tv.product__printer]]</div>
+    </div>
+    <div class="views-field views-field-field-prod-price">
+        <div class="field-content">
+            <div class="price_rub">
+                [[+tv.product__price:shk_curr_rate]] руб.
+            </div>
+            <div class="price_ye">
+                [[+tv.product__price]] у.е.
+            </div>
+        </div>
+    </div>
+    <div class="views-field views-field-nid">
+        <div class="field-content">
+
+            <!--
+            <div class="cols basket_item_count">
+                <span class="min">-</span>
+                <span class="cif">1</span>
+                <span class="plus">+</span>
+            </div>
+-->
+       <!--     <div rel="15519" class="buy addto_basket">В корзину</div> -->
+
+            <form action="[[~[[*id]]? &scheme=`abs`]]" method="post">
+                <div class="field-content">
+
+                    <div class="cols basket_item_count">
+                        <input class="shk-count" type="text" size="2" name="shk-count" maxlength="3" title="изменить количество" value="1" />
+                        [[*for-sale:[[+id]]]]
+                        <!--span class="min">-</span>
+                        <span class="cif">1</span>
+                        <span class="plus">+</span-->
+                    </div>
+
+                    <button type="submit" rel="16308" class="buy addto_basket shk-but">продать</button>
+                    <input type="hidden" name="shk-id" value="[[+id]]" />
+                    <input type="hidden" name="shk-name" value="[[+pagetitle]]" />
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
